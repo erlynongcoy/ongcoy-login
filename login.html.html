@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form</title>
+    
+    <style> 
+        #login-form{
+            background:black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #form{
+            width: 300px;
+            padding: 20px;
+            border-radius: 10px;
+            background:#d3d3d3;
+         
+        }
+
+        #loginbtm{
+            background: blue;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+
+        }
+        #loginbtm{
+            background:darkblue;
+        }
+    </style>
+</head>
+<body>
+    <div id="login-form">
+        <div id="form">
+            <h4>Login Form</h4>
+            <label>Enter your Username</label>
+            <input type="text" id="username">
+            <br><br>
+            <label>Enter your Password</label>
+            <input type="password" id="password">
+            <br><br>
+            <button id="loginbtm" onclick="login()">Login</button>
+            <br><br>
+            <span id="notif"></span>
+        </div>    
+    </div>
+
+    <script>
+
+        function login(){
+            var correctUsername = "Erlyn";
+            var correctPassword = "Ongcoy";
+
+            var typeUsername = document.getElementById("username").value;
+            var typePassword = document.getElementById("password").value;
+
+            if(correctUsername === typeUsername && correctPassword === typePassword){
+                document.getElementById("notif").innerText = "Login Successfully";
+                location.href="calculator.html";
+            
+            } else {
+                document.getElementById("notif").innerText = "Invalid username or password";
+            }
+        }
+    </script>
+</body>
+</html>
